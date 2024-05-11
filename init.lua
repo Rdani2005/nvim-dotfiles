@@ -2,7 +2,9 @@ require("rdani2005.plugins-setup") -- plugins setup
 -- core
 require("rdani2005.core.options")
 require("rdani2005.core.keymaps")
-require("rdani2005.plugins.monokai")
+-- theme
+require("rdani2005.plugins.themes.catppuccin")
+require("rdani2005.plugins.themes.monokai")
 require("rdani2005.core.colorscheme")
 -- plugins
 require("rdani2005.plugins.comment")

@@ -31,8 +31,9 @@ return packer.startup(function(use)
 	use("wbthomason/packer.nvim")
 
 	use("nvim-lua/plenary.nvim") -- lua functions that many plugins use
-
-	use("loctvl842/monokai-pro.nvim")
+	-- Themimng
+	use({ "catppuccin/nvim", as = "catppuccin" })
+	use("loctvl842/monokai-pro.nvim") -- having monokai theme
 
 	use("christoomey/vim-tmux-navigator") -- tmux & split window navigation
 

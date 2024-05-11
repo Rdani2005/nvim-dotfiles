@@ -89,6 +89,11 @@ _G.packer_plugins = {
     path = "/Users/daniel.sequeira/.local/share/nvim/site/pack/packer/start/ReplaceWithRegister",
     url = "https://github.com/vim-scripts/ReplaceWithRegister"
   },
+  catppuccin = {
+    loaded = true,
+    path = "/Users/daniel.sequeira/.local/share/nvim/site/pack/packer/start/catppuccin",
+    url = "https://github.com/catppuccin/nvim"
+  },
   ["cmp-buffer"] = {
     loaded = true,
     path = "/Users/daniel.sequeira/.local/share/nvim/site/pack/packer/start/cmp-buffer",
