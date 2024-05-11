@@ -10,21 +10,19 @@ opt.shiftwidth = 2
 opt.expandtab = true
 opt.autoindent = true
 
-
 -- line wrapping
 opt.wrap = false
-
 
 --search setting
 opt.ignorecase = true
 opt.smartcase = true
 
 -- appearance
-opt.termguicolors = true
+-- opt.termguicolors = true
 opt.background = "dark"
 opt.signcolumn = "yes"
 
---backspace 
+--backspace
 opt.backspace = "indent,eol,start"
 
 --clipboard
