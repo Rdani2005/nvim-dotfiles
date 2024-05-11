@@ -32,6 +32,7 @@ return packer.startup(function(use)
 
 	use("nvim-lua/plenary.nvim") -- lua functions that many plugins use
 	-- Themimng
+	use({ "dracula/vim", as = "dracula" }) -- dracula dark theme
 	use({ "catppuccin/nvim", as = "catppuccin" })
 	use("loctvl842/monokai-pro.nvim") -- having monokai theme
 
