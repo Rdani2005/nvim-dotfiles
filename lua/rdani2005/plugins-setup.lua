@@ -40,6 +40,7 @@ return packer.startup(function(use)
 
 	use("szw/vim-maximizer") -- maximizes and restores current window
 	use("tpope/vim-surround")
+	use("tpope/vim-fugitive")
 	use("vim-scripts/ReplaceWithRegister")
 	use("numToStr/Comment.nvim")
 	use("nvim-tree/nvim-tree.lua") -- file explorer

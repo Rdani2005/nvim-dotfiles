@@ -9,7 +9,6 @@ keymap.set("n", "x", '"_x')
 keymap.set("n", "<leader>+", "<C-a>")
 keymap.set("n", "<leader>-", "<C-x>")
 
-
 -- window management
 keymap.set("n", "<leader>sv", "<C-w>v")
 keymap.set("n", "<leader>sh", "<C-w>s")
@@ -24,7 +23,6 @@ keymap.set("n", "<leader>tp", ":tabp<CR>") --  go to previous tab
 -- vim-maximizer
 keymap.set("n", "<leader>sm", ":MaximizerToggle<CR>")
 
-
 -- nvim tree
 keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>")
 
@@ -35,5 +33,14 @@ keymap.set("n", "<leader>fc", "<cmd>Telescope grep_string<cr>") -- find string u
 keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<cr>") -- list open buffers in current neovim instance
 keymap.set("n", "<leader>fh", "<cmd>Telescope help_tags<cr>") -- list available help tags
 
--- restart lsp server 
+-- restart lsp server
 keymap.set("n", "<leader>rs", ":LspRestart<CR>") -- mapping to restart lsp if necessary
+
+-- Git Insigns
+keymap.set("n", "<leader>gp", ":Gitsigns preview_hunk<CR>", {})
+keymap.set("n", "<leader>gt", ":Gitsigns toggle_current_line_blame<CR>", {})
+-- Vim Fugitive
+keymap.set("n", "<leader>gb", ":Git blame<CR>")
+keymap.set("n", "<leader>gh", ":Git log<CR>")
+keymap.set("n", "<leader>gc", ":Git commit<CR>")
+keymap.set("n", "<leader>ga", ":Git add .<CR>")
