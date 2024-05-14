@@ -37,7 +37,7 @@ return packer.startup(function(use)
 	use("loctvl842/monokai-pro.nvim") -- having monokai theme
 
 	use("christoomey/vim-tmux-navigator") -- tmux & split window navigation
-
+	use("github/copilot.vim")
 	use("szw/vim-maximizer") -- maximizes and restores current window
 	use("tpope/vim-surround")
 	use("tpope/vim-fugitive")
