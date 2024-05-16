@@ -231,6 +231,11 @@ _G.packer_plugins = {
     path = "/Users/daniel.sequeira/.local/share/nvim/site/pack/packer/start/react-nextjs-snippets",
     url = "https://github.com/avneesh0612/react-nextjs-snippets"
   },
+  ["startup.nvim"] = {
+    loaded = true,
+    path = "/Users/daniel.sequeira/.local/share/nvim/site/pack/packer/start/startup.nvim",
+    url = "https://github.com/startup-nvim/startup.nvim"
+  },
   ["telescope-fzf-native.nvim"] = {
     loaded = true,
     path = "/Users/daniel.sequeira/.local/share/nvim/site/pack/packer/start/telescope-fzf-native.nvim",

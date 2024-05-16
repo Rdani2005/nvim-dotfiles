@@ -31,7 +31,7 @@ return packer.startup(function(use)
 	use("wbthomason/packer.nvim")
 
 	use("nvim-lua/plenary.nvim") -- lua functions that many plugins use
-	-- Themimng
+	-- Themes
 	use({ "dracula/vim", as = "dracula" }) -- dracula dark theme
 	use({ "catppuccin/nvim", as = "catppuccin" })
 	use("loctvl842/monokai-pro.nvim") -- having monokai theme
@@ -94,7 +94,9 @@ return packer.startup(function(use)
 			ts_update()
 		end,
 	})
-
+	use({
+		"startup-nvim/startup.nvim",
+	})
 	-- auto closing
 	use("windwp/nvim-autopairs") -- autoclose parens, brackets, quotes, etc...
 	use({ "windwp/nvim-ts-autotag", after = "nvim-treesitter" }) -- autoclose tags
