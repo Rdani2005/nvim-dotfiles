@@ -54,7 +54,10 @@ return packer.startup(function(use)
 	use("hrsh7th/cmp-path")
 
 	-- snippets
-	use("L3MON4D3/LuaSnip")
+	use({
+		"L3MON4D3/LuaSnip",
+		run = "make install_jsregexp",
+	})
 	use("saadparwaiz1/cmp_luasnip")
 	use("rafamadriz/friendly-snippets")
 	use("avneesh0612/react-nextjs-snippets")
