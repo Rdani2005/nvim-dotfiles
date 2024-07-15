@@ -1,5 +1,4 @@
 local opt = vim.opt -- for conciseness
-
 --line numbers
 opt.relativenumber = true
 opt.number = true
@@ -9,7 +8,7 @@ opt.tabstop = 2
 opt.shiftwidth = 2
 opt.expandtab = true
 opt.autoindent = true
-
+vim.o.scrolloff = 8
 -- line wrapping
 opt.wrap = false
 
