@@ -15,7 +15,7 @@ require("rdani2005.plugins.nvim-cmp")
 require("rdani2005.plugins.autopairs")
 require("rdani2005.plugins.gitsigns")
 require("rdani2005.plugins.treesitter")
-
+require("rdani2005.plugins.maven")
 -- plugins lsp
 require("rdani2005.plugins.lsp.lspconfig")
 require("rdani2005.plugins.lsp.lspsaga")

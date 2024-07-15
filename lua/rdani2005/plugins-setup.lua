@@ -53,6 +53,12 @@ return packer.startup(function(use)
 	use("hrsh7th/cmp-buffer")
 	use("hrsh7th/cmp-path")
 
+	-- maven for java devs
+	use({
+		"eatgrass/maven.nvim",
+		cmd = { "Maven", "MavenExec" },
+		dependencies = "nvim-lua/plenary.nvim",
+	})
 	-- snippets
 	use({
 		"L3MON4D3/LuaSnip",
