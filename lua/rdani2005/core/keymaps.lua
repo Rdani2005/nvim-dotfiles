@@ -46,3 +46,7 @@ keymap.set("n", "<leader>gc", ":Git commit<CR>")
 keymap.set("n", "<leader>ga", ":Git add .<CR>")
 keymap.set("n", "<leader>gpu", ":Git pull<CR>")
 keymap.set("n", "<leader>gph", ":Git push<CR>")
+
+-- extras
+keymap.set("v", "J", [[:m '>+1<CR>gv=gv]], { noremap = true, silent = true })
+keymap.set("v", "K", [[:m '<-2<CR>gv=gv]], { noremap = true, silent = true })
