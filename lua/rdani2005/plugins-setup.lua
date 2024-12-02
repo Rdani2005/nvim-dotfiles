@@ -59,6 +59,7 @@ return packer.startup(function(use)
 		dependencies = "nvim-lua/plenary.nvim",
 	})
 	use("mfussenegger/nvim-jdtls")
+	use("gleam-lang/gleam.vim")
 	-- snippets
 	use({
 		"L3MON4D3/LuaSnip",
