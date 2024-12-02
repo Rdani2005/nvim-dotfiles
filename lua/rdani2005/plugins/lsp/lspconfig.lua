@@ -109,3 +109,5 @@ lspconfig["lua_ls"].setup({
 		},
 	},
 })
+
+lspconfig.gleam.setup({})

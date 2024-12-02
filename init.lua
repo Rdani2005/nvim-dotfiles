@@ -21,6 +21,7 @@ require("rdani2005.plugins.lsp.lspconfig")
 require("rdani2005.plugins.lsp.lspsaga")
 require("rdani2005.plugins.lsp.mason")
 require("rdani2005.plugins.lsp.null-ls")
+require("rdani2005.plugins.gleam")
 -- java configs
 require("rdani2005.plugins.java")
 -- screen plugins
