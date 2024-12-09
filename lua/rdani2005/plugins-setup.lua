@@ -58,7 +58,6 @@ return packer.startup(function(use)
 		cmd = { "Maven", "MavenExec" },
 		dependencies = "nvim-lua/plenary.nvim",
 	})
-	use("mfussenegger/nvim-jdtls")
 	use("gleam-lang/gleam.vim")
 	-- snippets
 	use({
