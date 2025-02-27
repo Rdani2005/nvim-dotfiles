@@ -4,5 +4,5 @@ if not status then
 end
 
 startup_screen.setup({
-	theme = "dashboard",
+	theme = "rocket",
 })

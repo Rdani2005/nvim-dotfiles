@@ -24,3 +24,4 @@ require("rdani2005.plugins.lsp.null-ls")
 require("rdani2005.plugins.gleam")
 -- screen plugins
 require("rdani2005.plugins.startup_screen")
+require("startup.themes.rocket")
