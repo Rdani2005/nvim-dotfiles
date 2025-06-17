@@ -1,5 +1,5 @@
 -- import null-ls plugin safely
-local setup, null_ls = pcall(require, "null-ls")
+local setup, null_ls = pcall(require, "none-ls")
 if not setup then
   return
 end
@@ -37,7 +37,7 @@ null_ls.setup({
           vim.lsp.buf.format({
             filter = function(client)
               --  only use null-ls for formatting instead of lsp server
-              return client.name == "null-ls"
+              return client.name == "none-ls"
             end,
             bufnr = bufnr,
           })
