@@ -37,7 +37,7 @@ return packer.startup(function(use)
 	use("loctvl842/monokai-pro.nvim") -- having monokai theme
 
 	-- copilot
-	use("github/copilot.vim")
+	-- use("github/copilot.vim")
 
 	use("christoomey/vim-tmux-navigator") -- tmux & split window navigation
 	use("szw/vim-maximizer") -- maximizes and restores current window
@@ -46,7 +46,7 @@ return packer.startup(function(use)
 	use("vim-scripts/ReplaceWithRegister")
 	use("numToStr/Comment.nvim")
 	use("nvim-tree/nvim-tree.lua") -- file explorer
-	use("kyazdani42/nvim-web-devicons")
+  use("nvim-tree/nvim-web-devicons")
 	use("nvim-lualine/lualine.nvim")
 	use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" })
 	use({ "nvim-telescope/telescope.nvim", branch = "0.1.x" })
@@ -100,7 +100,7 @@ return packer.startup(function(use)
 	use("williamboman/mason-lspconfig.nvim")
 	-- formatting & linting
 	use("nvimtools/none-ls.nvim") -- configure formatters & linters
-	use("jayp0521/mason-null-ls.nvim") -- bridges gap b/w mason & null-ls
+	use("WhoIsSethDaniel/mason-tool-installer.nvim") -- bridges gap b/w mason & null-ls
 
 	-- treesitter configuration
 	use({

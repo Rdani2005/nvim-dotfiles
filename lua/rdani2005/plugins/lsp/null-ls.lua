@@ -1,45 +1,52 @@
--- import null-ls plugin safely
-local setup, null_ls = pcall(require, "none-ls")
-if not setup then
+-- import none-ls plugin safely
+local ok, none_ls = pcall(require, "none-ls")
+if not ok then
   return
 end
 
 -- for conciseness
-local formatting = null_ls.builtins.formatting -- to setup formatters
-local diagnostics = null_ls.builtins.diagnostics -- to setup linters
+local formatting  = none_ls.builtins.formatting -- formatters
+local diagnostics = none_ls.builtins.diagnostics -- linters
 
 -- to setup format on save
 local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
 
--- configure null_ls
-null_ls.setup({
-  -- setup formatters & linters
+none_ls.setup({
   sources = {
-    --  to disable file types use
-    --  "formatting.prettier.with({disabled_filetypes = {}})" (see null-ls docs)
-    formatting.prettier, -- js/ts formatter
-    formatting.stylua, -- lua formatter
-    diagnostics.eslint_d.with({ -- js/ts linter
-      -- only enable eslint if root has .eslintrc.js (not in youtube nvim video)
+    -- swap to `formatting.prettierd` if you prefer the daemon
+    formatting.prettier,   -- js/ts/etc
+    formatting.stylua,     -- lua
+    diagnostics.eslint_d.with({
+      -- enable only if repo has an ESLint config
       condition = function(utils)
-        return utils.root_has_file(".eslintrc.js") -- change file extension if you use something else
+        return utils.root_has_file({
+          ".eslintrc",
+          ".eslintrc.js",
+          ".eslintrc.cjs",
+          ".eslintrc.json",
+          ".eslintrc.yaml",
+          ".eslintrc.yml",
+          "eslint.config.js",
+          "eslint.config.cjs",
+          "eslint.config.mjs",
+          "eslint.config.ts",
+        })
       end,
     }),
   },
+
   -- configure format on save
-  on_attach = function(current_client, bufnr)
-    if current_client.supports_method("textDocument/formatting") then
+  on_attach = function(client, bufnr)
+    if client.supports_method("textDocument/formatting") then
       vim.api.nvim_clear_autocmds({ group = augroup, buffer = bufnr })
       vim.api.nvim_create_autocmd("BufWritePre", {
         group = augroup,
         buffer = bufnr,
         callback = function()
           vim.lsp.buf.format({
-            filter = function(client)
-              --  only use null-ls for formatting instead of lsp server
-              return client.name == "none-ls"
-            end,
             bufnr = bufnr,
+            -- only use none-ls for formatting (avoid tsserver/pyright, etc.)
+            filter = function(c) return c.name == "none-ls" end,
           })
         end,
       })
