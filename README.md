@@ -40,7 +40,7 @@ nvim/
 ## Install
 
 ```bash
-git clone <your-repo> ~/.config/nvim
+git clone https://github.com/Rdani2005/nvim-dotfiles.git ~/.config/nvim
 nvim   # Packer auto-installs on first launch
 ```
 
