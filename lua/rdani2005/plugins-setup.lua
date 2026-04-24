@@ -34,7 +34,6 @@ return packer.startup(function(use)
 	-- Themes
 	use({ "dracula/vim", as = "dracula" }) -- dracula dark theme
 	use({ "catppuccin/nvim", as = "catppuccin" })
-	use("loctvl842/monokai-pro.nvim") -- having monokai theme
 
 	-- copilot
 	-- use("github/copilot.vim")
@@ -46,7 +45,7 @@ return packer.startup(function(use)
 	use("vim-scripts/ReplaceWithRegister")
 	use("numToStr/Comment.nvim")
 	use("nvim-tree/nvim-tree.lua") -- file explorer
-  use("nvim-tree/nvim-web-devicons")
+	use("nvim-tree/nvim-web-devicons")
 	use("nvim-lualine/lualine.nvim")
 	use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" })
 	use({ "nvim-telescope/telescope.nvim", branch = "0.1.x" })
@@ -100,6 +99,7 @@ return packer.startup(function(use)
 	use("williamboman/mason-lspconfig.nvim")
 	-- formatting & linting
 	use("nvimtools/none-ls.nvim") -- configure formatters & linters
+	use("nvimtools/none-ls-extras.nvim")
 	use("WhoIsSethDaniel/mason-tool-installer.nvim") -- bridges gap b/w mason & null-ls
 
 	-- treesitter configuration

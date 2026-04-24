@@ -4,7 +4,7 @@ require("rdani2005.core.options")
 require("rdani2005.core.keymaps")
 -- theme
 require("rdani2005.plugins.themes.catppuccin")
-require("rdani2005.plugins.themes.monokai")
+-- require("rdani2005.plugins.themes.monokai")
 require("rdani2005.core.colorscheme")
 -- plugins
 require("rdani2005.plugins.comment")
@@ -22,6 +22,8 @@ require("rdani2005.plugins.lsp.lspsaga")
 require("rdani2005.plugins.lsp.mason")
 require("rdani2005.plugins.lsp.null-ls")
 require("rdani2005.plugins.gleam")
+-- Claude Code floating terminal
+require("rdani2005.plugins.claude-term")
 -- screen plugins
 require("rdani2005.plugins.startup_screen")
 require("startup.themes.rocket")

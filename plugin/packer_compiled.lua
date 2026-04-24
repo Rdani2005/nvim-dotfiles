@@ -172,15 +172,15 @@ _G.packer_plugins = {
     path = "/Users/daniel.sequeira/.local/share/nvim/site/pack/packer/opt/maven.nvim",
     url = "https://github.com/eatgrass/maven.nvim"
   },
-  ["monokai-pro.nvim"] = {
-    loaded = true,
-    path = "/Users/daniel.sequeira/.local/share/nvim/site/pack/packer/start/monokai-pro.nvim",
-    url = "https://github.com/loctvl842/monokai-pro.nvim"
-  },
   ["ng.nvim"] = {
     loaded = true,
     path = "/Users/daniel.sequeira/.local/share/nvim/site/pack/packer/start/ng.nvim",
     url = "https://github.com/joeveiga/ng.nvim"
+  },
+  ["none-ls-extras.nvim"] = {
+    loaded = true,
+    path = "/Users/daniel.sequeira/.local/share/nvim/site/pack/packer/start/none-ls-extras.nvim",
+    url = "https://github.com/nvimtools/none-ls-extras.nvim"
   },
   ["none-ls.nvim"] = {
     loaded = true,
@@ -300,19 +300,19 @@ time([[Sequenced loading]], false)
 
 -- Command lazy-loads
 time([[Defining lazy-load commands]], true)
-pcall(vim.api.nvim_create_user_command, 'Maven', function(cmdargs)
-          require('packer.load')({'maven.nvim'}, { cmd = 'Maven', l1 = cmdargs.line1, l2 = cmdargs.line2, bang = cmdargs.bang, args = cmdargs.args, mods = cmdargs.mods }, _G.packer_plugins)
-        end,
-        {nargs = '*', range = true, bang = true, complete = function()
-          require('packer.load')({'maven.nvim'}, {}, _G.packer_plugins)
-          return vim.fn.getcompletion('Maven ', 'cmdline')
-      end})
 pcall(vim.api.nvim_create_user_command, 'MavenExec', function(cmdargs)
           require('packer.load')({'maven.nvim'}, { cmd = 'MavenExec', l1 = cmdargs.line1, l2 = cmdargs.line2, bang = cmdargs.bang, args = cmdargs.args, mods = cmdargs.mods }, _G.packer_plugins)
         end,
         {nargs = '*', range = true, bang = true, complete = function()
           require('packer.load')({'maven.nvim'}, {}, _G.packer_plugins)
           return vim.fn.getcompletion('MavenExec ', 'cmdline')
+      end})
+pcall(vim.api.nvim_create_user_command, 'Maven', function(cmdargs)
+          require('packer.load')({'maven.nvim'}, { cmd = 'Maven', l1 = cmdargs.line1, l2 = cmdargs.line2, bang = cmdargs.bang, args = cmdargs.args, mods = cmdargs.mods }, _G.packer_plugins)
+        end,
+        {nargs = '*', range = true, bang = true, complete = function()
+          require('packer.load')({'maven.nvim'}, {}, _G.packer_plugins)
+          return vim.fn.getcompletion('Maven ', 'cmdline')
       end})
 time([[Defining lazy-load commands]], false)
 
