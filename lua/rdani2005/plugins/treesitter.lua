@@ -32,6 +32,8 @@ treesitter.setup({
     "vim",
     "dockerfile",
     "gitignore",
+    "gleam",
+    "java",
   },
   -- auto install above language parsers
   auto_install = true,

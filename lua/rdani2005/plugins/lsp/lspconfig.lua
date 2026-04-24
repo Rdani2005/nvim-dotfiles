@@ -90,6 +90,12 @@ setup_server("cssls", {
 setup_server("tailwindcss", {
 	capabilities = capabilities,
 	on_attach = on_attach,
+	settings = {
+		tailwindCSS = {
+			includeLanguages = { astro = "html" },
+			classAttributes = { "class", "className" },
+		},
+	},
 })
 
 -- emmet
@@ -123,23 +129,12 @@ setup_server("gleam", {
 })
 
 setup_server("htmx", {
+	capabilities = capabilities,
+	on_attach = on_attach,
 	filetypes = {
 		"html",
 		"templ",
 		"htmldjango",
 		"django-html",
-	},
-})
-
-setup_server("tailwindcss", {
-	capabilities = capabilities,
-	on_attach = on_attach,
-	settings = {
-		tailwindCSS = {
-			includeLanguages = {
-				astro = "html",
-			},
-			classAttributes = { "class", "className" },
-		},
 	},
 })

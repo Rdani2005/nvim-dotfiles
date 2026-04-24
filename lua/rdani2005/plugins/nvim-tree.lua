@@ -8,7 +8,6 @@ if not setup_devicons then
 	return
 end
 
-vim.g.loaded = 1
 vim.g.loaded_netrwPlugin = 1
 vim.opt.termguicolors = true
 
